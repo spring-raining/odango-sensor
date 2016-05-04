@@ -5,6 +5,13 @@ const DEVICE_PATH               = require('./defs.json').device_path;
 const BAUDRATE                  = require('./defs.json').baudrate;
 const METRICS_DEFINITION        = require('./metrics.json');
 
+// Export definitions
+if (process.env.MACKEREL_AGENT_PLUGIN_META) {
+  console.log('# mackerel-agent-plugin');
+  console.log(JSON.stringify(METRICS_DEFINITION));
+  return;
+}
+
 const sp = new SerialPort(DEVICE_PATH, {
   baudrate: BAUDRATE,
   parser: serialport.parsers.readline('\n'),
@@ -26,8 +33,6 @@ sp.open((err) => {
 
 function callback(humidity, temperature) {
   const now = Date.now();
-  console.log('# mackerel-agent-plugin');
-  console.log(JSON.stringify(METRICS_DEFINITION));
   console.log(`odango.humidity.my_room\t${humidity}\t${now}`);
   console.log(`odango.temperature.my_room\t${temperature}\t${now}`);
 }
