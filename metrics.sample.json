@@ -1,0 +1,24 @@
+{
+  "graphs": {
+    "odango.temperature": {
+      "label": "Temperature",
+      "unit": "float",
+      "metrics": [
+        {
+          "name": "my_room",
+          "label": "My Room"
+        }
+      ]
+    },
+    "odango.humidity": {
+      "label": "Humidity",
+      "unit": "percentage",
+      "metrics": [
+        {
+          "name": "my_room",
+          "label": "My Room"
+        }
+      ]
+    }
+  }
+}
