@@ -1,0 +1,22 @@
+{
+  "name": "odango-sensor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spring-raining/odango-sensor.git"
+  },
+  "author": "spring-raining",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/spring-raining/odango-sensor/issues"
+  },
+  "homepage": "https://github.com/spring-raining/odango-sensor#readme",
+  "dependencies": {
+    "serialport": "^3.0.1"
+  }
+}
